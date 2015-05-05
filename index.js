@@ -3,9 +3,9 @@ var app = express();
 
 var mysql = require('mysql');
 var connection = mysql.createConnection({
-	user: 'todo',
-	password: 'todo',
-	database: 'myappdb'
+	user: 'b0ea7ca3e0c1ec',
+	password: '62a7bbb5',
+	database: 'heroku_3cf5429302fd605'
 });
 
 app.set('port', (process.env.PORT || 5000));
