@@ -22,7 +22,7 @@ app.get('/', function(request, response){
 	var rank = 90;
 	var todo = 'go to workspace';
 	//connection.query('INSERT INTO todolist SET rank = ?, todo = ?', [rank, todo]);
-	var con = connection.query('select from todolist *');
+	var con = connection.query('select from todolist rank=90');
 	//response.send('add todo to database table on heroku')
 	response.send(con)
 });
