@@ -51,9 +51,9 @@ app.get('/todo', function(request, response){
 
 	var query = connection.query('SELECT * FROM todolist;');
 	query
-	.on('results', function(results){
-		response.send('the most important todo is ' + results.todo);
-	})
+		.on('results', function(rows){
+			response.send('the most important todo is ' + rows.todo);
+		})
 });
 
 
