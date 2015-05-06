@@ -29,20 +29,21 @@ app.get('/', function(request, response){
 	//console.log(con)
 });
 
-/*
+
 app.get('/todo', function(request, response){
-	var query = connection.query('SELECT * FROM todolist;' function(err, result, fields){
+/*	var query = connection.query('SELECT * FROM todolist;' function(err, result, fields){
 		response.send(results)
 	});
-
+*/
 	
+	response.send('add todo to database table on heroku')
 	/*var query = client.query('SELECT * FROM todolist;');
 	query.on('row', function(row){
 		console.log('get row:');
 		console.log(row);
-	});
+	});*/
 });
-*/
+
 
 app.listen(app.get('port'), function(){
 	console.log(app.get('port'))
