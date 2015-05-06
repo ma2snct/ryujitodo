@@ -34,7 +34,7 @@ app.get('/todo', function(request, response){
 	var query = connection.query('SELECT * FROM todolist;' function(err, result, fields){
 		response.send(results)
 	});
-});
+
 	
 	/*var query = client.query('SELECT * FROM todolist;');
 	query.on('row', function(row){
