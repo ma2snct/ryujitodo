@@ -34,30 +34,17 @@ app.get('/', function(request, response){
 
 
 app.get('/todo', function(request, response){
-	/*
-	connection.connect();
-	var query = connection.query('SELECT * FROM todolist;');
-	query
-		.on('results', function(rows){
-			response.send(rows);
-			console.log(rows);
-		})
-
-		.on('error', function(err){
-			response.send(err);
-			console.log(err);
-		})
-
-
-	*/
-	//response.send('this is todo list page.')
 	var query = connection.query('SELECT * FROM todolist;', function(err, results, fields){
-
-	//query.on('row', function(row){
-		console.log('get row:');
-		console.log(results);
-		response.send('the most important todo is ' + results[1].todo);
-		//response.send(results[0].todo);
+		//console.log('get row:');
+		//console.log(results);
+		var list;
+		i=0;
+		while(i<results){
+			list += results[i].todo;
+			i = i+1;
+		}
+		
+			response.send('the most important todo is ' + results[i].todo);
 	})
 });
 
