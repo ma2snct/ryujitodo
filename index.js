@@ -20,8 +20,8 @@ app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(request, response){
 	//response.send('This is my todo list')
-	var rank = 90;
-	var todo = 'go to workspace';
+	//var rank = 90;
+	//var todo = 'go to workspace';
 	//connection.query('INSERT INTO todolist SET rank = ?, todo = ?', [rank, todo]);
 	//var con = connection.query('SELECT * FROM todolist');
 	response.send('add todo to database table on heroku')
@@ -40,7 +40,7 @@ app.get('/todo', function(request, response){
 	query.on('row', function(row){
 		console.log('get row:');
 		console.log(row);
-	});*/
+	});
 });
 */
 
