@@ -29,7 +29,7 @@ app.get('/', function(request, response){
 	//console.log(con)
 });
 
-
+/*
 app.get('/todo', function(request, response){
 	var query = connection.query('SELECT * FROM todolist;' function(err, result, fields){
 		response.send(results)
@@ -42,7 +42,7 @@ app.get('/todo', function(request, response){
 		console.log(row);
 	});*/
 });
-
+*/
 
 app.listen(app.get('port'), function(){
 	console.log(app.get('port'))
