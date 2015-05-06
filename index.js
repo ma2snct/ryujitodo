@@ -24,20 +24,25 @@ app.get('/', function(request, response){
 	var todo = 'go to workspace';
 	//connection.query('INSERT INTO todolist SET rank = ?, todo = ?', [rank, todo]);
 	var con = connection.query('SELECT * FROM todolist');
-	//response.send('add todo to database table on heroku')
-	response.send(con)
-	console.log(con)
+	response.send('add todo to database table on heroku')
+	//response.send(con)
+	//console.log(con)
 });
 
-/*
+
 app.get('/todo', function(request, response){
-	var query = client.query('SELECT * FROM todolist;');
+	var query = connection.query('SELECT * FROM todolist;' function(err, result, fields){
+		response.send(results)
+	});
+});
+	
+	/*var query = client.query('SELECT * FROM todolist;');
 	query.on('row', function(row){
 		console.log('get row:');
 		console.log(row);
-	});
+	});*/
 });
-*/
+
 
 app.listen(app.get('port'), function(){
 	console.log(app.get('port'))
