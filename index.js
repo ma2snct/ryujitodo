@@ -34,26 +34,19 @@ app.get('/', function(request, response){
 
 
 app.get('/todo', function(request, response){
-	/*
+	//一件なら表示できる
 	var query = connection.query('SELECT * FROM todolist;', function(err, results, fields){
-		//console.log('get row:');
-		//console.log(results);
-		var list;
-		i=0;
-		while(i<results){
-			list = list + results[i].todo;
-			i = i+1;
-		}
-		
-		response.send('the most important todo is ' + results.todo);
+		response.send('the most important todo is ' + results[0].todo);
 	})
-	*/
+	
 
+	//全件表示したいけど、できてない
+	/*
 	var query = connection.query('SELECT * FROM todolist;');
 	query
 		.on('results', function(rows){
 			response.send('the most important todo is ' + rows.todo);
-		})
+		})*/
 });
 
 
