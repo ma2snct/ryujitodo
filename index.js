@@ -34,6 +34,7 @@ app.get('/', function(request, response){
 
 
 app.get('/todo', function(request, response){
+	/*
 	var query = connection.query('SELECT * FROM todolist;', function(err, results, fields){
 		//console.log('get row:');
 		//console.log(results);
@@ -44,7 +45,14 @@ app.get('/todo', function(request, response){
 			i = i+1;
 		}
 		
-			response.send('the most important todo is ' + results.todo);
+		response.send('the most important todo is ' + results.todo);
+	})
+	*/
+
+	var query = connection.query('SELECT * FROM todolist;');
+	query
+	.on('results', function(results){
+		response.send('the most important todo is ' + results.todo);
 	})
 });
 
