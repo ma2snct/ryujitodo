@@ -38,6 +38,10 @@ app.get('/todo', function(request, response){
 			response.send(rows);
 		})
 
+		.on('error', function(err){
+			response.send(err);
+		})
+
 
 	
 	//response.send('this is todo list page.')
