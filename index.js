@@ -36,7 +36,7 @@ app.get('/todo', function(request, response){
 	});
 */
 	
-	response.send('add todo to database table on heroku')
+	response.send('this is todo list page.')
 	/*var query = client.query('SELECT * FROM todolist;');
 	query.on('row', function(row){
 		console.log('get row:');
