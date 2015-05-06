@@ -33,10 +33,10 @@ app.get('/', function(request, response){
 app.get('/todo', function(request, response){
 	connection.query('SELECT * FROM todolist;' function(err, results, fields){
 		response.send(results)
-	});
+	})
 
 	
-	response.send('this is todo list page.')
+	//response.send('this is todo list page.')
 	/*var query = client.query('SELECT * FROM todolist;');
 	query.on('row', function(row){
 		console.log('get row:');
