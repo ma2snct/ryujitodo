@@ -22,10 +22,20 @@ app.get('/', function(request, response){
 	var rank = 90;
 	var todo = 'go to workspace';
 	//connection.query('INSERT INTO todolist SET rank = ?, todo = ?', [rank, todo]);
-	var con = connection.query('select from todolist rank=90');
-	//response.send('add todo to database table on heroku')
-	response.send(con)
+	var con = connection.query('SELECT FROM todolist rank=90');
+	response.send('add todo to database table on heroku')
+	//response.send(con)
+	//console.log(con)
 });
+
+app.get('/todo', function(request, response){
+	var query = client.query('SELECT * FROM todolist;');
+	query.on('row', function(row){
+		console.log('get row:');
+		console.log(row);
+	});
+});
+
 
 app.listen(app.get('port'), function(){
 	console.log(app.get('port'))
