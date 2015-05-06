@@ -31,7 +31,7 @@ app.get('/', function(request, response){
 
 
 app.get('/todo', function(request, response){
-	connection.query('SELECT * FROM todolist;' function(err, results, fields){
+	connection.query('SELECT * FROM todolist' function(err, results, fields){
 		response.send(results)
 	})
 
