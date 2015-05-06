@@ -24,7 +24,7 @@ app.get('/', function(request, response){
 	var todo = 'go to workspace';
 	//connection.query('INSERT INTO todolist SET rank = ?, todo = ?', [rank, todo]);
 	var con = connection.query('SELECT * FROM todolist');
-	response.send('add todo to database table on heroku')
+	//response.send('add todo to database table on heroku')
 	response.send(con)
 	console.log(con)
 });
