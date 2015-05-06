@@ -44,7 +44,7 @@ app.get('/todo', function(request, response){
 			i = i+1;
 		}
 		
-			response.send('the most important todo is ' + results[i].todo);
+			response.send('the most important todo is ' + results);
 	})
 });
 
