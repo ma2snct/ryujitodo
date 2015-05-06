@@ -40,7 +40,7 @@ app.get('/todo', function(request, response){
 		var list;
 		i=0;
 		while(i<results){
-			list += results[i].todo;
+			list = list + results[i].todo;
 			i = i+1;
 		}
 		
