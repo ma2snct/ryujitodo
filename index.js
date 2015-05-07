@@ -33,6 +33,18 @@ app.get('/', function(request, response){
 });
 
 
+app.get('/add', function(request, response){
+
+	//response.send('This is my todo list')
+	var rank = 90;
+	var todo = 'go to workspace';
+	connection.query('INSERT INTO todolist SET rank = ?, todo = ?', [rank, todo]);
+	//var con = connection.query('SELECT * FROM todolist');
+	response.send('add todo to database table on heroku')
+	//response.send(con)
+	//console.log(con)
+});
+
 app.get('/todo', function(request, response){
 	//一件なら表示できる
 	var query = connection.query('SELECT * FROM todolist;', function(err, results, fields){
