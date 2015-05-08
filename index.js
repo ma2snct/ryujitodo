@@ -48,7 +48,7 @@ app.get('/add', function(request, response){
 app.get('/todo', function(request, response){
 	//一件なら表示できる
 	connection.query('SELECT * FROM todolist;', function(err, results, fields){
-		response.send('the most important todo is ' + results[0].todo);
+		response.render('todo', {todos:resuls});
 	})
 	
 
