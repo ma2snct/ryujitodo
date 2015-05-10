@@ -44,14 +44,14 @@ app.get('/todo', function(request, response){
 	});
 });
 
-/*
+
 app.get('/alltodo', function(request, response){
 	//全件表示したいけど、できてない
 	connection.query('SELECT * FROM todolist;', function(err, results, fields){
 		response.render('todo.jade', {todos:results});
 	});
 });
-*/
+
 
 
 app.listen(app.get('port'), function(){
