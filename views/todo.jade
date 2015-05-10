@@ -6,5 +6,5 @@ html
 	body
 		h1 that's todo list!
 		ul
-			for val in todos
-				li #{todos[val].rank}
+			each todo in todos
+				li todo.todo
