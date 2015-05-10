@@ -25,6 +25,10 @@ app.get('/', function(request, response){
 	response.send('This is my todo list')
 });
 
+app.get('/render', function(request, response){
+	response.render('./views/try_render.jade');
+});
+
 
 app.get('/add', function(request, response){
 	var rank = 90;
