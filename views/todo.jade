@@ -3,13 +3,7 @@ html
 	head
 		meta(charset='utf-8')
 		title= "todo list app"
-		link(rel='stylesheet', href='/css/style.css');
 	body
-		table(boder=1)
-			tr
-				th rank
-				th todo
-			- each todo in  todos
-				tr
-					td= todo.rank
-					td= todo.todo
+		ul
+			for val in todos
+				li #{todos.todo}
