@@ -22,7 +22,7 @@ app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'jade');
 
 app.get('/', function(request, response){
-	response.send('This is my todo list')
+	response.send('This is my todo list 進捗:とりあえず全件表示できた alltodo')
 });
 
 app.get('/render', function(request, response){
