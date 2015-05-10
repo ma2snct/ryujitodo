@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "express": "^4.12.3",
-	"mysql":"x"
+	"mysql":"x",
+	"jade":"1.9.2"
   }
 }
