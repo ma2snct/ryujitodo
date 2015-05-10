@@ -19,7 +19,7 @@ var connection = mysql.createConnection({
 
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
-
+app.set('view engine', 'jade');
 
 app.get('/', function(request, response){
 	response.send('This is my todo list')
