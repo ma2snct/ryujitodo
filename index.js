@@ -26,7 +26,7 @@ app.get('/', function(request, response){
 });
 
 app.get('/render', function(request, response){
-	response.render('./views/try_render.jade');
+	response.render('try_render.jade');
 });
 
 
