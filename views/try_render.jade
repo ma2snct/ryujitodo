@@ -6,9 +6,28 @@ html
 	body
 		h1 hello jade render
 
-		- var flag = true;
+		- var flag === 1 ;
 
-		if flag
-			p trueでっせ
+		if flag === 0
+			p 0でっせ
+		else if flag === 1
+			p そら1よ
 		else
-			p そらfalseよ
+			0でも1でもないなにか
+
+		flag = 2
+
+		case flag
+			when 0: p 0です
+			when 1,2 : p 1or2
+			when 3: p 3よ
+
+		var i=3
+
+		while i--
+			p=i
+
+
+		ul
+			for val, index in ['a', 'b', 'c']
+				li #{index}:#{val}
