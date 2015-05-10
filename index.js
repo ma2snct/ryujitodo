@@ -42,7 +42,7 @@ app.get('/todo', function(request, response){
 	connection.query('SELECT * FROM todolist;', function(err, results, fields){
 		response.send('the most important todo is ' + results[2].todo);
 	});
-});	
+});
 
 app.get('/alltodo', function(request, response){
 	//全件表示したいけど、できてない
