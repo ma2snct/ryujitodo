@@ -1,0 +1,16 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		title= "todo list app"
+	body
+		h1 add todo!
+
+		form(action="/add", method="post")
+			p todo
+			input(type="text", name="todo", size="60")
+			br
+			p rank
+			input(type="number", name="rank", size="60")
+			br
+			input(type="submit", value="Submit")
